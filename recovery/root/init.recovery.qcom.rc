@@ -34,6 +34,7 @@ on fs
     chown system system /dev/ion
     start pulldecryptfiles
     install_keyring
+    setprop ro.build.system_root_image true
     setprop ro.hardware.bootctrl msm8953
 
     chmod 0777 /dev/qseecom
