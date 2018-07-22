@@ -40,6 +40,9 @@ TARGET_NO_BOOTLOADER := true
 # Crypto
 TARGET_HW_DISK_ENCRYPTION := true
 
+# GPT Utils
+BOARD_PROVIDES_GPTUTILS := true
+
 # Kernel
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 androidboot.bootdevice=7824900.sdhci earlycon=msm_hsl_uart,0x78af000 androidboot.selinux=permissive
