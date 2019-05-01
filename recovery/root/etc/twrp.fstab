@@ -2,6 +2,8 @@
 /boot            emmc              /dev/block/bootdevice/by-name/boot       flags=slotselect
 /system          ext4              /dev/block/bootdevice/by-name/system     flags=slotselect
 /system_image    emmc              /dev/block/bootdevice/by-name/system     flags=slotselect
+/vendor          ext4              /dev/block/bootdevice/by-name/vendor     flags=backup=1;slotselect
+/vendor_image    emmc              /dev/block/bootdevice/by-name/vendor     flags=backup=1;slotselect
 /data            ext4              /dev/block/bootdevice/by-name/userdata   flags=encryptable=footer
 /misc            emmc              /dev/block/bootdevice/by-name/misc
 /persist	 ext4	           /dev/block/bootdevice/by-name/persist    flags=display="Persist"
