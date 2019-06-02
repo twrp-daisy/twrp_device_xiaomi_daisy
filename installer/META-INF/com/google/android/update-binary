@@ -72,6 +72,17 @@ done;
 ui_print " ";
 ui_print "Image patching complete!";
 
+ui_print " ";
+ui_print "Making TWRP persistent...";
+umount /system_root
+mount /system_root
+script="$tmp/99-twrp.sh"
+cp -f "$tool" "/system_root/system/bin"
+chmod 755 "/system_root/system/bin/magiskboot"
+cp -f "$script" "/system_root/system/addon.d"
+chmod 755 "/system_root/system/addon.d/99-twrp.sh"
+umount /system_root
+
 cd /;
 rm -rf /dev/tmp;
 
