@@ -66,7 +66,11 @@ PRODUCT_PACKAGES_DEBUG += \
 
 # Keystore
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.hardware.keystore=$(TARGET_BOARD_PLATFORM)
+    ro.hardware.keystore=$(TARGET_BOARD_PLATFORM) \
+    ro.hardware.keymaster=$(TARGET_BOARD_PLATFORM) \
+    ro.hardware.gatekeeper=$(TARGET_BOARD_PLATFORM) \
+    ro.hardware.bootctrl=$(TARGET_BOARD_PLATFORM) \
+    ro.build.system_root_image=true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
