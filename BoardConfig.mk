@@ -79,6 +79,7 @@ BOARD_ROOT_EXTRA_FOLDERS := bt_firmware dsp firmware persist
 BOARD_USES_RECOVERY_AS_BOOT := true
 
 # TWRP Configuration
+TARGET_OTA_ASSERT_DEVICE := daisy,daisy_sprout
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TW_NO_SCREEN_BLANK := true
