@@ -19,52 +19,12 @@ $(call inherit-product, vendor/omni/config/common.mk)
 
 $(call inherit-product, build/target/product/embedded.mk)
 
+# Inherit from device configuration
+$(call inherit-product, device/xiaomi/daisy/device.mk)
+
 # Platform
 TARGET_BOARD_PLATFORM := msm8953
 
-# A/B Updater
-AB_OTA_UPDATER := true
-
-AB_OTA_PARTITIONS += \
-    boot \
-    system
-
-AB_OTA_POSTINSTALL_CONFIG += \
-    RUN_POSTINSTALL_system=true \
-    POSTINSTALL_PATH_system=system/bin/otapreopt_script \
-    FILESYSTEM_TYPE_system=ext4 \
-    POSTINSTALL_OPTIONAL_system=true
-
-PRODUCT_PACKAGES += \
-    otapreopt_script
-
-# Boot control
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.0-impl \
-    android.hardware.boot@1.0-service \
-    bootctrl.$(TARGET_BOARD_PLATFORM) \
-
-PRODUCT_PACKAGES_DEBUG += \
-    bootctl
-
-# Enable update engine sideloading by including the static version of the
-# boot_control HAL and its dependencies.
-PRODUCT_STATIC_BOOT_CONTROL_HAL := \
-    bootctrl.$(TARGET_BOARD_PLATFORM) \
-    libcutils \
-    libgptutils \
-    libz
-
-# Update engine
-PRODUCT_PACKAGES += \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
-
-PRODUCT_PACKAGES_DEBUG += \
-    update_engine_client
-
-# Keystore
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore=$(TARGET_BOARD_PLATFORM) \
     ro.hardware.keymaster=$(TARGET_BOARD_PLATFORM) \
