@@ -50,20 +50,23 @@ on property:ro.crypto.state=encrypted
 on property:crypto.ready=1
     start sbinqseecomd
 
-on property:crypto.ready=0
-    stop sbinqseecomd
-    stop keymaster-3-0
-    stop gatekeeper-1-0
+on property:vendor.sys.listeners.registered=true && property:ro.crypto.type=block
+    start keymaster-3-0
 
-on property:vendor.sys.listeners.registered=true
+on property:vendor.sys.listeners.registered=true && property:ro.crypto.type=file
     start keymaster-3-0
     start gatekeeper-1-0
 
-on property:ro.crypto.fs_crypto_blkdev=*
+on property:ro.crypto.fs_crypto_blkdev=* && property:ro.crypto.type=block
     setprop crypto.ready 0
+    stop sbinqseecomd
+    stop keymaster-3-0
 
-on property:twrp.all.users.decrypted=true
+on property:twrp.all.users.decrypted=true 
     setprop crypto.ready 0
+    stop sbinqseecomd
+    stop keymaster-3-0
+    stop gatekeeper-1-0
 
 # Separate copy needed to use /sbin/linker64 instead of /system/bin/linker64
 service sbinqseecomd /sbin/qseecomd
