@@ -8,7 +8,7 @@
 
 SYS=$S
 BACKUPDIR=$C
-MAGISKBOOT="$S/bin/magiskboot"
+MAGISKBOOT="$S/addon.d/twrp/magiskboot"
 
 if [ "$(getprop ro.boot.slot_suffix)" = "_a" ] 
 then
