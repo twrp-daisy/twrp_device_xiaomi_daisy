@@ -75,15 +75,23 @@ ui_print "Image patching complete!";
 ui_print " ";
 ui_print "Making TWRP persistent...";
 umount /system_root
-mount /system_root
-script="$tmp/99-twrp.sh"
-addondir="/system_root/system/addon.d"
-mkdir -p "$addondir/twrp"
-cp -f "$tool" "$addondir/twrp"
-chmod 755 "$addondir/twrp/magiskboot"
-cp -f "$script" "$addondir"
-chmod 755 "$addondir/99-twrp.sh"
-umount /system_root
+
+system_a="/dev/block/bootdevice/by-name/system_a"
+system_b="/dev/block/bootdevice/by-name/system_b"
+
+for system in $system_a $system_b; do
+  script="$tmp/99-twrp.sh"
+  mountdir="$tmp/system-mount"
+  mkdir "$mountdir"
+  mount "$system" "$mountdir"
+  addondir="$mountdir/system/addon.d"
+  mkdir -p "$addondir/twrp"
+  cp -f "$tool" "$addondir/twrp"
+  chmod 755 "$addondir/twrp/magiskboot"
+  cp -f "$script" "$addondir"
+  chmod 755 "$addondir/99-twrp.sh"
+  umount $mountdir
+done
 
 cd /;
 rm -rf /dev/tmp;
