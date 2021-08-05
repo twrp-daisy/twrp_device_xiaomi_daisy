@@ -30,7 +30,7 @@ Working:
 - Decryption (Keymaster 3.0) 
 
 Broken:
-- Nothing except decryption in ROMs using keymaster 4.0
+- Nothing except decryption in ROMs using keymaster 4.0 (Stock does not support this anyways and custom ROM developers should not use it since there is no point in doing so as the firmware does not support k4.0 features, which results in it running in "legacy" mode)
 
 ## Device picture
 
