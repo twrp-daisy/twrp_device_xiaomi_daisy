@@ -18,6 +18,22 @@ The Xiaomi Mi A2 Lite was announced and released in July 2018.
 | Dimensions   | 149.3 x 71.7 x 8.8 mm                           |
 | Display      | 1080 x 2280 pixels (~432 ppi)                   |
 
+## Bugs
+
+Working:
+- Touch, screen
+- Flashing ZIP files (including A/B zips like ROMs)
+- Installing IMG files to respective partitions
+- Backup, restore to Internal Storage, Micro SD Card, USB OTG
+- Shutdown, Reboot to System, Recovery, Fastboot
+- Micro SD card 
+- ADB, MTP
+- Date, Time, Temperature, battery reading
+- Decryption (QTI Keymaster 3.0) 
+
+Broken:
+- Nothing except decryption in ROMs using keymaster 4.0 (QTI or AOSP) and keymaster 3.0 (AOSP). Keymaster 4.0 will run in "legacy" mode anyways as the device's firmware doesn't support keymaster 4.0 features. AOSP keymaster decryption is not supported since TWRP is built based on Android Pie.
+
 ## Device picture
 
 ![Xiaomi Mi A2 Lite](https://i01.appmifile.com/webfile/globalimg/products/pc/D1S/black_phone.png "Xiaomi Mi A2 Lite in black")
