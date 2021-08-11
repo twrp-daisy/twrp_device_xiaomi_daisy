@@ -33,7 +33,6 @@ on fs
     chown system drmrpc /dev/qseecom
     chmod 0664 /dev/ion
     chown system system /dev/ion
-    install_keyring
 
     start hwservicemanager
     start servicemanager
@@ -41,6 +40,9 @@ on fs
 on boot
     setprop sys.usb.config none
     setprop sys.usb.config adb
+
+on property:ro.crypto.state=encrypted && property:ro.crypto.type=file
+    install_keyring
 
 on property:ro.crypto.state=encrypted
     start prepdecrypt
