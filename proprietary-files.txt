@@ -21,3 +21,6 @@ vendor/lib64/librecovery_updater_msm.so:recovery/root/vendor/lib64/librecovery_u
 vendor/lib64/librpmb.so:recovery/root/vendor/lib64/librpmb.so
 vendor/lib64/libssd.so:recovery/root/vendor/lib64/libssd.so
 vendor/lib64/libtime_genoff.so:recovery/root/vendor/lib64/libtime_genoff.so
+
+# taken from santoni
+vendor/lib64/libspl.so:recovery/root/vendor/lib64/libspl.so
