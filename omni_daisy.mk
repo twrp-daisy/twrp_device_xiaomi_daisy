@@ -58,6 +58,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.hardware.keystore=msm8953
+
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
 PRODUCT_NAME := omni_daisy
