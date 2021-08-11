@@ -29,6 +29,9 @@ on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
 
+    start hwservicemanager
+    start servicemanager
+
 service hwservicemanager /sbin/hwservicemanager
     user root
     group root
