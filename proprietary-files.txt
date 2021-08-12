@@ -1,8 +1,8 @@
 # Unpinned blobs | taken from daisy-user-10-QKQ1.191002.002-V11.0.21.0.QDLMIXM-release-keys
 
-vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:recovery/root/sbin/android.hardware.gatekeeper@1.0-service-qti
-vendor/bin/hw/android.hardware.keymaster@3.0-service-qti:recovery/root/sbin/android.hardware.keymaster@3.0-service-qti
-vendor/bin/qseecomd:recovery/root/sbin/qseecomd
+vendor/bin/hw/android.hardware.gatekeeper@1.0-service-qti:recovery/root/sbin/android.hardware.gatekeeper@1.0-service-qti|bea6d682011b465a08b9085f7b5e69b965743eee|0f50525910d7604178a872dba2340d97829d212c
+vendor/bin/hw/android.hardware.keymaster@3.0-service-qti:recovery/root/sbin/android.hardware.keymaster@3.0-service-qti|ac0aabf396888c9dc8b6dc23291e190daa943e24|5f596a319bab28ca1451c71ec70410df4820872f
+vendor/bin/qseecomd:recovery/root/sbin/qseecomd|98e59e53f6bf2e585120f07f93d1265acfa80e7b|c68263446e4ab8938f0aaed60c915f04f9f452e7
 vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:recovery/root/vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so:recovery/root/vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/lib64/hw/gatekeeper.msm8953.so:recovery/root/vendor/lib64/hw/gatekeeper.msm8953.so
