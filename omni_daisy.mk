@@ -59,7 +59,7 @@ PRODUCT_PACKAGES_DEBUG += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.hardware.keystore=msm8953 \
     ro.hardware.bootctrl=msm8953 \
-	ro.treble.enabled=true
+    ro.treble.enabled=true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := daisy
