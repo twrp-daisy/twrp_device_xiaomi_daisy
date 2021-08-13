@@ -9,6 +9,7 @@
 /dev/block/bootdevice/by-name/boot           /boot           emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/system         /               ext4    ro,barrier=1                                                    wait,slotselect
 /dev/block/bootdevice/by-name/userdata       /data           ext4    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc     wait,check,encryptable=footer
+/dev/block/bootdevice/by-name/userdata       /data           f2fs    noatime,nosuid,nodev,barrier=1,data=ordered,noauto_da_alloc     wait,check,encryptable=footer
 /dev/block/mmcblk1p1                         /sdcard         vfat    nosuid,nodev                                                    wait,voldmanaged=sdcard1:auto,noemulatedsd,encryptable=userdata
 /dev/block/bootdevice/by-name/misc           /misc           emmc    defaults                                                        defaults
 /dev/block/bootdevice/by-name/vendor         /vendor         ext4    ro,barrier=1                                                    wait,slotselect
