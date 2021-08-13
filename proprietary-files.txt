@@ -7,6 +7,7 @@ vendor/lib64/hw/android.hardware.gatekeeper@1.0-impl-qti.so:recovery/root/vendor
 vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so:recovery/root/vendor/lib64/hw/android.hardware.keymaster@3.0-impl-qti.so
 vendor/lib64/hw/gatekeeper.msm8953.so:recovery/root/vendor/lib64/hw/gatekeeper.msm8953.so
 vendor/lib64/hw/keystore.msm8953.so:recovery/root/vendor/lib64/hw/keystore.msm8953.so
+vendor/lib64/hw/bootctrl.msm8953.so:recovery/root/vendor/lib64/hw/bootctrl.msm8953.so
 vendor/lib64/libGPreqcancel.so:recovery/root/vendor/lib64/libGPreqcancel.so
 vendor/lib64/libGPreqcancel_svc.so:recovery/root/vendor/lib64/libGPreqcancel_svc.so
 vendor/lib64/libQSEEComAPI.so:recovery/root/vendor/lib64/libQSEEComAPI.so
